@@ -16,33 +16,59 @@ Source0:	https://github.com/pywbem/pywbem/archive/%{version}/pywbem-%{version}.t
 Patch0:		pywbem-no-wheel.patch
 URL:		https://github.com/pywbem/pywbem
 BuildRequires:	python-modules >= 1:2.7
-BuildRequires:	python-setuptools
+BuildRequires:	python-setuptools >= 1:41.5.1
 %if %{with tests}
 BuildRequires:	python-FormEncode >= 1.3.1
-BuildRequires:	python-M2Crypto >= 0.31.0
 BuildRequires:	python-PyYAML >= 5.3.1
+BuildRequires:	python-backports.statistics >= 0.1.0
+BuildRequires:	python-certifi >= 2019.11.28
+BuildRequires:	python-colorama >= 0.3.9
+BuildRequires:	python-cryptography >= 3.3
+BuildRequires:	python-decorator >= 4.0.11
+BuildRequires:	python-easy-server >= 0.8.0
+BuildRequires:	python-easy-vault >= 0.7.0
 BuildRequires:	python-funcsigs >= 1.0.2
 BuildRequires:	python-httpretty >= 0.9.5
-BuildRequires:	python-importlib_metadata >= 0.12
+BuildRequires:	python-idna >= 2.8
+BuildRequires:	python-importlib_metadata >= 0.22
 BuildRequires:	python-importlib_metadata < 5
+BuildRequires:	python-jsonschema >= 2.6.0
+BuildRequires:	python-keyring >= 18.0.0
 BuildRequires:	python-lxml >= 4.6.2
 BuildRequires:	python-mock >= 2.0.0
-BuildRequires:	python-packaging >= 16.6
+BuildRequires:	python-packaging >= 19.0
+BuildRequires:	python-pluggy >= 0.7.1
 BuildRequires:	python-ply >= 3.10
 BuildRequires:	python-pytest >= 4.3.1
+BuildRequires:	python-pytest-easy-server >= 0.8.0
 BuildRequires:	python-pytz >= 2016.10
 BuildRequires:	python-requests >= 2.25.0
+BuildRequires:	python-requests-mock >= 1.6.0
+BuildRequires:	python-requests-toolbelt >= 0.8.0
 BuildRequires:	python-six >= 1.14.0
 BuildRequires:	python-testfixtures >= 6.9.0
+BuildRequires:	python-urllib3 >= 1.26.19
+BuildRequires:	python-yagot >= 0.5.0
 BuildRequires:	python-yamlloader >= 0.5.5
 %endif
 BuildRequires:	rpm-pythonprov
 BuildRequires:	rpmbuild(macros) >= 1.749
 %if %{with doc}
+# python3 >= 3.8 due to required sphinx and autodocsumm versions
+BuildRequires:	python3-PyYAML >= 6.0.1
 BuildRequires:	python3-autodocsumm >= 0.2.12
+BuildRequires:	python3-certifi >= 2024.07.04
+BuildRequires:	python3-idna >= 3.7
+BuildRequires:	python3-modules >= 1:3.8
+BuildRequires:	python3-ply >= 3.10
+BuildRequires:	python3-requests >= 2.32.2
+BuildRequires:	python3-six >= 1.14.0
 BuildRequires:	python3-sphinx_git >= 10.1.1
+BuildRequires:	python3-sphinx_rtd_theme >= 2.0
 BuildRequires:	python3-sphinxcontrib-fulltoc >= 1.2.0
-BuildRequires:	sphinx-pdg-3 >= 4.5
+BuildRequires:	python3-urllib3 >= 1.26.19
+BuildRequires:	python3-yamlloader >= 0.5.5
+BuildRequires:	sphinx-pdg-3 >= 7.1.0
 %endif
 Requires:	python-modules >= 1:2.7
 BuildArch:	noarch
