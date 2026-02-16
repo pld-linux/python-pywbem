@@ -6,6 +6,7 @@
 Summary:	WBEM client and related utilities, written in pure Python
 Summary(pl.UTF-8):	Klient WBEM i powiązane narzędzia, napisane w czystym Pythonie
 Name:		python-pywbem
+# keep 1.7.x here for python2 support
 Version:	1.7.4
 Release:	0.1
 License:	LGPL v2.1+
